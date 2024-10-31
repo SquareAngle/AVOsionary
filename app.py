@@ -21,7 +21,7 @@ def recognize_post():
     pixels = pixels.split(',')
     img = np.array(pixels).astype(float).reshape(1, 50, 50, 1)
 
-    model = keras.models.load_model('numbers3.keras')
+    model = keras.models.load_model('numbers4.keras')
     pred = np.argmax(model.predict(img), axis=-1) 
     print(f'Prediction Value: {pred[0]}')
 
