@@ -79,6 +79,13 @@ function drawCanvas() {
     }
 }
 
+function resetCanvas() {
+    clickX = []
+    clickY = []
+    clickDrag = []
+    context.clearRect(0, 0, canvas.width, canvas.height)
+}
+
 function getPixels() {
     let rawPixels = context.getImageData(0, 0, 200, 200).data
     let _pixels = []
