@@ -124,9 +124,26 @@ function regAction() {
     })
     .then(data => {
         console.log(data);
-        document.getElementById('prediction-output').innerText = `Prediction: ${data.pred}`;
+        displayPrediction(data.pred, data.images)
       })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+function displayPrediction(pred, images) {
+    const outputDiv = document.getElementById('prediction-output');
+
+    // clear previous content
+    outputDiv.innerHTML = `<h2>Prediction: ${pred}</h2>`;
+
+    // display each feature map image
+    images.forEach((imgBase64, index) => {
+        const imgElement = document.createElement('img');
+        imgElement.src = `data:image/png:base64,${imgBase64}`;
+        imgElement.alt = `Feature Map ${index + 1}`;
+        imgElement.style.margin = '10px';
+        imgElement.style.border = '1px solid #ddd';
+        outputDiv.appendChild(imgElement);
     });
 }
