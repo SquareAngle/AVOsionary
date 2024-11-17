@@ -84,6 +84,9 @@ function resetCanvas() {
     clickY = []
     clickDrag = []
     context.clearRect(0, 0, canvas.width, canvas.height)
+    // Clear prediction
+    const predDiv = document.getElementById('prediction-output');
+    predDiv.innerHTML = ``;
 }
 
 function getPixels() {
