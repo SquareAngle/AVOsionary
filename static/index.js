@@ -140,7 +140,7 @@ function displayPrediction(pred, images) {
     // display each feature map image
     images.forEach((imgBase64, index) => {
         const imgElement = document.createElement('img');
-        imgElement.src = `data:image/png:base64,${imgBase64}`;
+        imgElement.src = `data:image/png;base64,${imgBase64}`;
         imgElement.alt = `Feature Map ${index + 1}`;
         imgElement.style.margin = '10px';
         imgElement.style.border = '1px solid #ddd';
