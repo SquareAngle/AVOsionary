@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: URL('Minecraftia-Regular.ttf') format('truetype');
+  }
+
+body {
+    background-image: url(https://static.wikia.nocookie.net/minecraft_gamepedia/images/b/b4/Block_of_Diamond_%28texture%29_JE4_BE3.png);
+    font-family: 'Minecraftia';
+}
+
+#canvas { 
+    background-image: url(https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/11/Item_Frame_%28texture%29_JE2_BE2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
